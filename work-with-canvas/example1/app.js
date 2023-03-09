@@ -21,9 +21,9 @@ class App {
         this.stageWidth = document.body.clientWidth;
         this.stageHeight = document.body.clientHeight;
 
-        this.canvas.width = this.stageWidth * 2;
-        this.canvas.height = this.stageHeight * 2;
-        this.ctx.scale(2,2);
+        this.canvas.width = this.stageWidth * 1.5;
+        this.canvas.height = this.stageHeight * 1.5;
+        this.ctx.scale(1.5,1.5);
 
         for (let i = 0; i < this.hills.length; i++) {
             this.hills[i].resize(this.stageWidth,this.stageHeight);            

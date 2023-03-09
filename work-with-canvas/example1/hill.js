@@ -29,10 +29,10 @@ export class Hill {
         let prev = cur;
 
         let dots = [];
-        ctx.x += this.speed; // hill이 움직이게 함
+        cur.x += this.speed; // hill이 움직이게 함
         ctx.moveTo(cur.x, cur.y);
 
-        if (cur.x > this.gap) { // 끊임없는 언덕 만들어주기
+        if (cur.x > - this.gap) { // 끊임없는 언덕 만들어주기
             this.points.unshift({
                 x: -(this.gap * 2),
                 y: this.getY()
@@ -48,7 +48,7 @@ export class Hill {
             cur = this.points[i];
             cur.x += this.speed; //hill이 움직이게 함
             const cx = (prev.x + cur.x) / 2;
-            const cy = (prev.x + cur.y) / 2;
+            const cy = (prev.y + cur.y) / 2;
             ctx.quadraticCurveTo(prev.x, prev.y, cx, cy);
 
             dots.push({
