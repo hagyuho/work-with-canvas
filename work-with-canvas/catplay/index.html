@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Playtime Game</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="timer" id="timer">Timer: </label>
+        <select id="timer">
+            <option value="60">1 Minute</option>
+            <option value="180">3 Minutes</option>
+            <option value="300">5 Minutes</option>
+        </select>
+    </div>
+    <canvas id="canvas" width="1000" height="600"></canvas>
+    <button id="start-button">게임 시작</button>
+    <script src="game.js"></script>
+</body>
+</html>
